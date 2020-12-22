@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>간단한 문제 풀기2</title>
+    <style>
+body {
+      background-image: url('./image/111.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+
+    }
+
+    .box {
+      width: 800px;
+      height: 500px;
+      margin-top: 60px;
+      margin-left: 900px;
+      padding-top: 40px;
+      padding-left: 70px;
+      font-size: 3.3rem;
+      background-color: cornsilk;
+      opacity: 0.7;
+      border-radius: 3px 0 3px 0; 
+    
+    }
+
+
+    </style>
+<link rel="stylesheet" href="css/style2.css">
+</head>
+
+<body>
+    <header>
+        <button id="menu-button">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </button>
+        <h5>Algebra</h5>
+    </header>
+
+    <nav id="side-menu" class="hidden">
+        <ul>
+
+            <li><a href="./index.html">처음으로</a></li>
+            <li><a href="./2019.html">2019족보</a></li>
+            <li><a href="./test.html">임용기출(ring + field)</a></li>
+            <li><a href="./memo.html">체 X 체 = 체? </a></li>
+            <li><a href="./memo2.html">여유한은 cpt?</a></li>
+
+
+        </ul>
+    </nav>
+    <script>
+
+        let hidden = true;
+        const menuButton = document.getElementById('menu-button');
+        const sideMenu = document.getElementById('side-menu');
+
+        menuButton.addEventListener('click', () => {
+            if (hidden) {
+                sideMenu.classList.remove('hidden');
+                hidden = false;
+            } else {
+                sideMenu.classList.add('hidden');
+                hidden = true;
+            }
+        }); 
+    </script>
+    
+
+
+<div class="box">
+<h3>여유한 위상은 cpt? (y/n)</h3>
+    <form id="sign-up1">
+        <label for="user-ide">정답입력</label><br>
+        <input type="text" name="userIde" id="user-ide"><br>
+       
+
+        <input type="submit" value="정답확인">
+    </form>
+
+</div>
+    <script>
+        const form = document.querySelector('#sign-up1');
+        form.onsubmit = function () {
+            const userIde = document.querySelector('#user-ide').value;
+            
+
+            if (userIde == 'y') {
+                alert('정답입니다. 참고로 보통, 이산, 하한, 여가산위상은 cpt가 아닙니다.');
+                return false;
+            } else {
+                alert('여유한 위상은 cpt입니다. 참고로 보통, 이산, 하한, 여가산위상은 cpt가 아닙니다.');
+            }
+        };
+    </script>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
